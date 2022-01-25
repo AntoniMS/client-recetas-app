@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { registerStatus } from './core/models/user';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'client';
+  public statusRegistered = '';
+
+
+
+
+  public setStatusRegistered(event: registerStatus) {
+    this.statusRegistered = event.status
+  }
 }

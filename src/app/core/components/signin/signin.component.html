@@ -1,1 +1,14 @@
-<p>signin works!</p>
+<div>
+    <form class="form-signin" [formGroup]="signinForm" (ngSubmit)="loginUser()">
+        <h3>Acceso Usuario</h3>
+        <div>
+            <label>Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Introduce tu email" required>
+        </div>
+        <div>
+            <label>Contraseña</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Introduce tu contraseña" required>
+        </div>
+        <button class="button" type="submit">Acceder</button>
+    </form>
+</div>
